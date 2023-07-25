@@ -47,15 +47,17 @@ This is because by default, Create React App produces a build assuming your app 
 ```
 But GitHub Pages doesn’t support routers that use the HTML5 ```pushState``` history API under the hood (for example, React Router using ```browserHistory```).
 
-It assumes the project is being hosted at ```/words_learning_game```. But on localhost, the project is not being hosted at ```/words_learning_game```. So the paths being requested for js and css are messed up.
+It assumes the project is being hosted at ```/words_learning_game```(my repo name). But on localhost, the project is not being hosted at ```/words_learning_game```. So the paths being requested for js and css are messed up.
 
-When there is a fresh page load for a url like https://dianaleo.github.io/words_learning_game/..., where ```/words_learning_game/...``` is a frontend route, the GitHub Pages server **returns 404** because it knows nothing about ```/words_learning_game/...```.
+When there is a fresh page load for a url like [https://dianaleo.github.io/words_learning_game/...](https://dianaleo.github.io/words_learning_game/), where ```/words_learning_game/...``` is a frontend route, the GitHub Pages server **returns 404** because it knows nothing about ```/words_learning_game/...```.
 
 #### 3.1 Serving Apps with Client-Side Routing
 If you use routers that use ```browserHistory```, many static file servers will fail. If you used React Router with a route for /todos/42, the development server will respond to localhost:3000/todos/42 properly, but a production build will not.
 
 solution: 
-- run ```export PUBLIC_URL="/words_learning_game"``` in the terminal
+- run
+ ```export PUBLIC_URL="/words_learning_game"``` 
+in the terminal
 - Add a basename to your parent ```Router``` element, setting basename to the name of your repo – like so: ```Router basename="/words_learning_game"```
 
 ![Add basename for client side routing.png](https://dianaleo.github.io/assets/images/25-07-2023/Add-basename-for-client-side-routing.png)
@@ -73,7 +75,8 @@ Add, commit, and push to github.
 
 # 5. Generate a gh-pages branch
 After pushing, there is a ```./build``` folder in ```master/main``` branch of github repo.
-Run ```git subtree push --prefix=build origin gh-pages```
+Run
+ ```git subtree push --prefix=build origin gh-pages```
 to copy the ```./build``` folder to a new branch ```gh-pages```.
 After 2 minutes, the website is available to visit.
 
@@ -81,7 +84,9 @@ After 2 minutes, the website is available to visit.
 
 From now, everytime I modify and push it, I have to delete the gh-pages branch
 ```git push origin --delete gh-pages```
-and regenerate it again.
+
+and regenerate it again using
+```git subtree push --prefix=build origin gh-pages```.
 
 reference:
 [https://github.com/vortesnail/blog/issues/8](https://github.com/vortesnail/blog/issues/8)
