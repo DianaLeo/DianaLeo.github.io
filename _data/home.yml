@@ -9,9 +9,9 @@ navbar_entries:
     url: https://dianaleo.github.io/album
 
 project_entries:
-  - title: Project 1
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
+  - title: 50Day50Projects-React
+    url: https://dianaleo.github.io/50projects50days-react/
+    desc: These are front-end practicing projects, involving html, css, sass, js, and react.
 
   - title: Project 2
     url: overview-post

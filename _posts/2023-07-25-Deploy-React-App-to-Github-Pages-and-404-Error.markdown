@@ -78,6 +78,10 @@ After pushing, there is a ```./build``` folder in ```master/main``` branch of gi
 Run
  ```git subtree push --prefix=build origin gh-pages```
 to copy the ```./build``` folder to a new branch ```gh-pages```.
+I encounterd a problem here:
+![Copy build folder to new gh-pages branch problem.png](https://dianaleo.github.io/assets/images/25-07-2023/Copy-build-folder-to-new-gh-pages-branch-problem.png)
+
+The reason is that **/build** was in **.gitignore** by default. Just delete it.
 After 2 minutes, the website is available to visit.
 
 ![Change branch to gh-pages.png](https://dianaleo.github.io/assets/images/25-07-2023/Change-branch-to-gh-pages.png)
