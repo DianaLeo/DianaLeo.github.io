@@ -2,8 +2,11 @@ title: Diana Liu
 author: Diana Wenjiao Liu
 url: "" # root address of the site
 description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
-
+  Junior-level passionate and self-motivated full-stack web developer aiming at creating elegant solutions effectively. 
+  With 1 year experience in HTML, CSS, SASS, JavaScript, React, NodeJS, RESTful API, Git, and SQL/noSQL. 
+  Have three major projects and many practicing projects. 
+  A good learner with EE bachelor and IT master degree.  
+  An outgoing social lover with various hobbies - photography, piano, dancing, ourdoor activities, ... 
 permalink: /:slug
 
 favicon: "./logo.png" # relative path to site's favicon

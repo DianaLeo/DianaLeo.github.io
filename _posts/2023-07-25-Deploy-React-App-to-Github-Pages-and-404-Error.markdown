@@ -57,7 +57,7 @@ If you use routers that use ```browserHistory```, many static file servers will 
 solution: 
 - run
  ```export PUBLIC_URL="/words_learning_game"``` 
-in the terminal
+in the git bash terminal
 - Add a basename to your parent ```Router``` element, setting basename to the name of your repo – like so: ```Router basename="/words_learning_game"```
 
 ![Add basename for client side routing.png](https://dianaleo.github.io/assets/images/25-07-2023/Add-basename-for-client-side-routing.png)
