@@ -2,7 +2,7 @@
 layout: post
 title:  "Memory Leak with SetTimeOut and SetInterval"
 date:   2023-07-29 19:39:59 +1000
-categories: git
+categories: JS
 ---
 
 切换页面的时候计时器还没工作完毕，但是切换页面的时候，DOM就消失了，componentwillunmount，那么用ref.current就会=null，则access一切dom元素属性都会出错。
