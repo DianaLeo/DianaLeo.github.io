@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to explain promises in layman's terms"
+title: "How to explain promises and Async/Await in layman's terms"
 date:   2023-08-22 11:07:39 +1000
 categories: Javascript
 ---
@@ -15,10 +15,9 @@ categories: Javascript
 
  ```
  let myPromise = new Promise(function(resolve, reject) {
-  setTimeout(function() { resolve("I love You !!"); }, 3000);
+  setTimeout(function() { resolve("oranges!!"); }, 3000);
 });
 ```
-"I love You !!" is the "oranges".
  
 
 
@@ -47,8 +46,69 @@ myPromise
 .then((oranges)=>{
   //making a cake
   return cake;
-},(err)=>{//deal with err})
-.then((cake)=>{console.log(cake)},(err)=>{//do something about err});
+})
+.then((cake)=>{console.log(cake)})
+.catch((err)=>{});
 ```
 
 Then you can go to the third shop, the forth shop. That is called ```Promise Chain```
+
+
+
+## Promise chain is not elegant enough?
+
+That's what Async/Await for.
+Async/Await is just a syntax sugar.
+**Async** is for packing the return of a normal function into a Promise.
+
+```
+async fn(){}
+```
+
+equals to
+
+```
+async fn(){
+  return Promise.resolve(undefined);
+}
+```
+
+```
+async fn(){
+  let myPromise = new Promise(function(resolve, reject) {
+    setTimeout(function() { resolve("oranges!!"); }, 3000);
+  });
+}
+```
+equals to **the staff informs you oranges are ready for pick up**.
+
+**Then you can pick them up:**
+```
+let oranges = await myPromise;
+```
+
+equals to
+
+```
+.then((oranges)=>{})
+```
+
+Just be mindful of where to put await. Await has to be within the async.
+```
+async fn(){
+  try{
+    let orangePromise = new Promise(function(resolve, reject) {
+      setTimeout(()=> { resolve("oranges!!"); }, 3000);
+    });
+    let oranges = await orangePromise;
+
+    let cakePromise = new Promise(function(resolve, reject) {
+      setTimeout(()=> { 
+        //do something with oranges
+        resolve("cake!!"); }, 3000);
+    });
+    let cake = await cakePromise;
+  }
+  catch(err){}
+}
+```
