@@ -9,17 +9,17 @@ navbar_entries:
     url: https://dianaleo.github.io/album
 
 project_entries:
-  - title: 50Day50Projects-React
+  - title: 50Days50Projects-React
     url: https://dianaleo.github.io/50projects50days-react/
-    desc: These are front-end practicing projects, involving html, css, sass, js, and react.
+    desc: These front-end practicing projects is framed with REACT. Skills involve HTML, CSS, SASS, JS, and REACT. I also learnt how to host REACT apps on Github.
 
-  - title: Project 2
-    url: overview-post
-    desc: Projects are shown in card layout
+  - title: Sushi Chef K
+    url: https://dianaleo.github.io/Sushi_Chef_K/
+    desc: A business demonstration website (restaurant). Responsive design has been made for PCs, iPads, and mobiles. It was coding with HTML, SASS, and Vanilla JS.
 
-  - title: Project 3
-    url: overview-post
-    desc: You can control visibility from _config.yml file
+  - title: Weather App
+    url: https://dianaleo.github.io/weather/
+    desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
 
   - title: Project 4
     url: overview-post
@@ -36,35 +36,33 @@ project_entries:
     desc: It also has a scalable vertical list (in case you need it)
 
 old_project_entries:
-  - title: Soopr
-    url: https://www.soopr.co
-    desc: Delight your readers - add beautiful share and like buttons easily to your websites 
+  - title: 50Days50Projects
+    url: https://dianaleo.github.io/50projects50days/
+    desc: These projects are different from the one in Projects section. THese are not coded with REACT. Just HTML, CSS, and JS. 
     highlight: NEW
 
-  - title: Cookie
-    url: https://github.com/abhinavs/cookie
-    desc: An open source landing website with supporting pages and integrated blog
+  - title: Sign-Up Page
+    url: https://dianaleo.github.io/simpleSignUpPage/
+    desc: 
 
-  - title: Moonwalk
-    url: https://github.com/abhinavs/moonwalk
-    desc: A fast and minimalist Jekyll blog theme with clean dark mode
+  - title: Responsive Card
+    url: https://dianaleo.github.io/responsiveCard_tutorial2/
+    desc: 
 
-  - title: Humangous
-    url: https://www.humangous.co
-    desc: The better people know you, the better they collaborate
+  - title: Responsive Card 2
+    url: https://dianaleo.github.io/responsiveCard_lesson2homework/
+    desc: 
 
 footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
+  - title: homepage
+    url: https://dianaleo.github.io/
 
-  - title: twitter
-    url: https://twitter.com/abhinav
+  - title: linkedIn
+    url: 
 
   - title: github
-    url: https://github.com/abhinavs
+    url: https://github.com/DianaLeo
 
-  - title: feed
-    url: feed.xml
 
 misc_entries:
   - title: this is an example vertical list
@@ -83,10 +81,10 @@ misc_entries:
   - title: moonwalk on the Internet
     url: false
     entries:
-      - title: on Github
+      - title: 
         url: https://github.com/abhinavs/moonwalk
 
-      - title: originally built for abhinav's homepage
+      - title: 
         url: https://www.abhinav.co
 
       - title: this list is scalable and can be nested
