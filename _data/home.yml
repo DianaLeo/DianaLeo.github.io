@@ -16,19 +16,20 @@ project_entries:
   - title: Sushi Chef K
     url: https://dianaleo.github.io/Sushi_Chef_K/
     desc: A business demonstration website (restaurant). Responsive design has been made for PCs, iPads, and mobiles. It was coding with HTML, SASS, and Vanilla JS.
+    highlight: WIP
+
+  - title: Todo List
+    url: http://ec2-52-63-58-210.ap-southeast-2.compute.amazonaws.com:3000/
+    desc: My first deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
 
   - title: Weather App
     url: https://dianaleo.github.io/weather/
     desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
-
-  - title: Project 4
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml
     highlight: WIP
 
   - title: Project 5
     url: overview-post
-    desc: Moonwalk also has horizontal list (used in header and footer)
+    desc: This project uses highlight markup, configured in _data/home.yml. Moonwalk also has horizontal list (used in header and footer)
     highlight: WIP
 
   - title: Project 6
