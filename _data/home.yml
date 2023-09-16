@@ -21,11 +21,11 @@ project_entries:
   - title: Todo List
     url: http://ec2-52-63-58-210.ap-southeast-2.compute.amazonaws.com:3000/
     desc: My first deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
+    highlight: WIP
 
   - title: Weather App
     url: https://dianaleo.github.io/weather/
     desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
-    highlight: WIP
 
   - title: Project 5
     url: overview-post
