@@ -12,6 +12,7 @@ project_entries:
   - title: 50Days50Projects-React
     url: https://dianaleo.github.io/50projects50days-react/
     desc: These front-end practicing projects is framed with REACT. Skills involve HTML, CSS, SASS, JS, and REACT. I also learnt how to host REACT apps on Github.
+    highlight: WIP
 
   - title: Sushi Chef K
     url: https://dianaleo.github.io/Sushi_Chef_K/
@@ -22,19 +23,20 @@ project_entries:
     url: http://ec2-52-63-58-210.ap-southeast-2.compute.amazonaws.com:3000/
     desc: My first deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
     highlight: WIP
+    
+  - title: Finance Logger
+    url: https://dianaleo.github.io/FinanceLogger/
+    desc: A tool to record invoices and payments. Written in Typescript. Front end only(TS HTML CSS). Details are in my blog "Typescript learning and practice". 
+    highlight: WIP
 
   - title: Weather App
     url: https://dianaleo.github.io/weather/
     desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
 
-  - title: Project 5
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml. Moonwalk also has horizontal list (used in header and footer)
-    highlight: WIP
+  - title: My First React App
+    url: https://dianaleo.github.io/my-react-app/
+    desc: I have practiced some hooks, including useState, useEffect, useRef, and useContext.
 
-  - title: Project 6
-    url: overview-post
-    desc: It also has a scalable vertical list (in case you need it)
 
 old_project_entries:
   - title: 50Days50Projects
