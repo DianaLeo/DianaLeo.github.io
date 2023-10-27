@@ -9,10 +9,19 @@ navbar_entries:
     url: https://dianaleo.github.io/album
 
 project_entries:
+  - title: PDF Generator
+    url: https://dianaleo.github.io/PDFGenerator_TodoList/
+    desc: A React with Typescript learning project. Practiced react routing, mainly useReducer hook, localStorage, and Typescript. Except for learning section, there are two pages - PDF generator and a CRUD task board.
+    highlight: WIP
+
+  - title: Google Location Autocomplete
+    url: https://dianaleo.github.io/googleLocationSearch/
+    desc: Syntax - Typescript+React, Logic - React hooks and customized hooks, Storage - Redux + Context, Style - CSS + customized MUI component.
+    highlight: WIP
+
   - title: 50Days50Projects-React
     url: https://dianaleo.github.io/50projects50days-react/
     desc: These front-end practicing projects is framed with REACT. Skills involve HTML, CSS, SASS, JS, and REACT. I also learnt how to host REACT apps on Github.
-    highlight: WIP
 
   - title: Sushi Chef K
     url: https://dianaleo.github.io/Sushi_Chef_K/
@@ -22,20 +31,11 @@ project_entries:
   - title: Todo List
     url: http://ec2-52-63-58-210.ap-southeast-2.compute.amazonaws.com:3000/
     desc: My first deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
-    highlight: WIP
     
   - title: Finance Logger
     url: https://dianaleo.github.io/FinanceLogger/
     desc: A tool to record invoices and payments. Written in Typescript. Front end only(TS HTML CSS). Details are in my blog "Typescript learning and practice". 
-    highlight: WIP
 
-  - title: Weather App
-    url: https://dianaleo.github.io/weather/
-    desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
-
-  - title: My First React App
-    url: https://dianaleo.github.io/my-react-app/
-    desc: I have practiced some hooks, including useState, useEffect, useRef, and useContext.
 
 
 old_project_entries:
@@ -44,13 +44,13 @@ old_project_entries:
     desc: These projects are different from the one in Projects section. THese are not coded with REACT. Just HTML, CSS, and JS. 
     highlight: NEW
 
-  - title: Sign-Up Page
-    url: https://dianaleo.github.io/simpleSignUpPage/
-    desc: 
+  - title: Weather App
+    url: https://dianaleo.github.io/weather/
+    desc: A http request practice. Applied three methods - XMLHttpRequest, fetch with async/await, and axios with async/await.
 
-  - title: Responsive Card
-    url: https://dianaleo.github.io/responsiveCard_tutorial2/
-    desc: 
+  - title: My First React App
+    url: https://dianaleo.github.io/my-react-app/
+    desc: I have practiced some hooks, including useState, useEffect, useRef, and useContext.
 
   - title: Responsive Card 2
     url: https://dianaleo.github.io/responsiveCard_lesson2homework/
