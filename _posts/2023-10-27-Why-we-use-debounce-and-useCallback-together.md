@@ -11,10 +11,12 @@ categories: fullstack
 ```
 const fn = send some request
 ```
-A way to control and limit the frequency of a this function execution - debounce 
+A way to control and limit the frequency of a function execution - debounce 
 
 
 ## A simple implementation of debounce
+
+It is a closure
 
 ```
 function debounce (fn, delay) {
@@ -57,7 +59,7 @@ Executing it five times within 1000ms will only send one request
 is `let timer = null` in the **closure**
 
 No matter how many times we call `debouncedFn`, there is only one `timer` in the memory,
-and all we do is 
+and all we do is executing the following for five times
 ```
     clearTimeOut(timer)
     timer = setTimeOut(()=>{
@@ -69,15 +71,20 @@ and all we do is
 ## Problem
 
 But what if we are using it in a react component?
+
 What if a state get updated during the five calls?
+
 The whole lot inside the component will run.
 
+
 `const debouncedFn = debounce(fn, 1000)` will run again
+
 which means `let timer = null` will run again
 
 which means another `debouncedFn` and another `timer` is created in the memory!
 
-Executing `debouncedFn()` five times within 1000ms will **NOT** only send one request
+Then, executing `debouncedFn()` five times within 1000ms will **NOT** only send one request
+
 The result may be unpredictable
 
 
