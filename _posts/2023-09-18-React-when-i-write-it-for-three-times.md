@@ -1,21 +1,20 @@
 ---
 layout: post
-title: "[React] When I Write It for Three Times - Animated Countdown"
+title: "When I Write React for Three Times - Animated Countdown"
 date:   2023-09-18 20:21:39 +1000
-categories: fullstack
+categories: react
 ---
 
 
 
-## Version 1
+## 
 
 When I write the first version, I haven't learn SOLID principles and Component design. 
 
 - I used a lot of **useRefs** to manipulate **DOM** elements, which is not professional.
 
-- 
 
-```
+```javascript
 import './AnimatedCountdown.css';
 import { useRef, useEffect } from 'react';
 

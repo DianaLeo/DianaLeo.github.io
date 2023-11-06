@@ -2,7 +2,7 @@
 layout: post
 title: "How to explain promises and Async/Await in layman's terms"
 date:   2023-08-22 11:07:39 +1000
-categories: Javascript
+categories: JS
 ---
 
 
@@ -13,7 +13,7 @@ categories: Javascript
 
  - **Asyncronized situaiton:** No orange was available. Staff gave you a small device ```(Promise)``` with two lights ```(currently no light on=>pending status)```. When oranges get there, you see the green one on, and you can pick them up ```(resolve(data)=>fulfilled status)``` . When there is a problem and oranges are not coming, you see the red light on ```(reject(err)=>rejected status)```. You didn't have to wait for several hours, and could do whatever you like ```(non-blocking)```. 
 
- ```
+ ```javascript
  let myPromise = new Promise(function(resolve, reject) {
   setTimeout(function() { resolve("oranges!!"); }, 3000);
 });
@@ -29,7 +29,7 @@ Staff didn't care what you are going to do with the oranges. So you took them **
 
 If you want to eat them raw (finish using the data), there will be no more return. Your task can stop here. 
 
-```
+```javascript
 myPromise.then((value)=>{
   document.getElementById("demo").innerHTML = value;
 },(err)=>{});
@@ -41,7 +41,7 @@ But you wanted to take them to a cake shop, and use them as materials to make a 
 
 The second shop gave you another device with two lights.```(then returns a promise as well)``` 
 
-```
+```javascript
 myPromise
 .then((oranges)=>{
   //making a cake
@@ -61,19 +61,19 @@ That's what Async/Await for.
 Async/Await is just a syntax sugar.
 **Async** is for packing the return of a normal function into a Promise.
 
-```
+```javascript
 async fn(){}
 ```
 
 equals to
 
-```
+```javascript
 async fn(){
   return Promise.resolve(undefined);
 }
 ```
 
-```
+```javascript
 async fn(){
   let myPromise = new Promise(function(resolve, reject) {
     setTimeout(function() { resolve("oranges!!"); }, 3000);
@@ -83,18 +83,18 @@ async fn(){
 equals to **the staff informs you oranges are ready for pick up**.
 
 **Then you can pick them up:**
-```
+```javascript
 let oranges = await myPromise;
 ```
 
 equals to
 
-```
+```javascript
 .then((oranges)=>{})
 ```
 
 Just be mindful of where to put await. Await has to be within the async.
-```
+```javascript
 async fn(){
   try{
     let orangePromise = new Promise(function(resolve, reject) {

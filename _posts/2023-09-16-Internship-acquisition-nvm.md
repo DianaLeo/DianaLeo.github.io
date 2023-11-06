@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Internship Acquisition] nvm"
+title: "Internship Acquisition - nvm"
 date:   2023-09-16 22:57:39 +1000
-categories: fullstack
+categories: backend
 ---
 
 

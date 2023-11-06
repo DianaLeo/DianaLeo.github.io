@@ -2,7 +2,7 @@
 layout: post
 title:  "Deploy React App to Github Pages and 404 Error"
 date:   2023-07-25 12:54:59 +1000
-categories: git
+categories: deploy
 ---
 I am learning how to deploy web apps to github pages.
 

@@ -5,6 +5,9 @@
         <span class="home-date">
           {{ post.date | date: site.theme_config.date_format }}»
         </span>
+        <span class="post-categories">
+          {{ post.categories }}
+        </span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
     {% endfor %}

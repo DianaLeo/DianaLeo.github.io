@@ -2,7 +2,7 @@
 layout: post
 title: "Typescript learning and practice"
 date:   2023-09-26 15:56:39 +1000
-categories: fullstack
+categories: typescript
 ---
 
 
@@ -25,14 +25,14 @@ will compile it to ***.js, while __-w__ stands for watching.
 
 ## 2. Type Basics
 ### 2.1 Implicit
-```
+```javascript
 let character = 'mario';
 character = 20;//error
 ```
 Will be an compile error, because compiler infer the type.
 
 But sometimes the inference is not reliable:
-```
+```javascript
 const circ = (diameter) =>{
     return diameter * Math.PI;
 }
@@ -40,7 +40,7 @@ console.log(circ('hello'));
 ```
 There will be no compile error, and browser will log an "NaN"
 We want the problem solved during compile time, then we explicitly give a type.
-```
+```javascript
 const circ = (diameter:number) =>{
     return diameter * Math.PI;
 }
@@ -57,36 +57,36 @@ let ninja<span style="color: #fcbdb8">:</span>{ name: any, age: any }
 ##### Arrays/Objects: 
 
 If we don't initialize it, we cannot use array/objects functions
-```
+```javascript
 let ninjas: string[];
 ninjas.push('sss')//error
 ```
 > Uncaught TypeError: Cannot read properties of undefined (reading 'push')
 When we initialize it, we canuse their functions
-```
+```javascript
 let ninjas: string[] = [];
 ninjas.push('sss')
 ```
 
 ##### Union types
 - For arrays, we need ()
-```
+```javascript
 let ninjas: (string|number|boolean)[]=[]
 ninjas.push('sss')
 ninjas.push(5)
 ninjas.push(true)
 ```
 - For normal variables, we don't need ()
-```
+```javascript
 let uid: string|number;
 ```
 
 ##### Objects
-```
+```javascript
 let ninjaOne: object;
 ninjaOne = { name: 'yoshi', age: 30 };
 ```
-```
+```javascript
 let ninjaTwo: {
   name: string,
   age: number,
@@ -97,7 +97,7 @@ ninjaTwo = { name: 'ken', age: 20, beltColour: 'black' };
 Either way, there will be a compile error if we use ``ninjaOne.values()``
 
 ### 2.3 Dynamic(any) types
-```
+```javascript
 let ninja: { name: any, age: any }
 ```
 
@@ -119,13 +119,13 @@ Inside **tsconfig.json**, there are something important:
 
 ### 4.1 More generic
 **Function** has to be **capitalized**, while other types like **string** doesn't.
-```
+```javascript
 let greet: Function;
 greet = () => { console.log('object') }
 ```
 
 ### 4.2 Parameter type declaration
-```
+```javascript
 const add = (a: number, b: number, c: (number | string) ) => {
     console.log(a + b);
     console.log(c);
@@ -133,7 +133,7 @@ const add = (a: number, b: number, c: (number | string) ) => {
 add(5, 10);//error
 ```
 - Optional parameter method 1
-```
+```javascript
 const add = (a: number, b: number, c?: (number | string) ) => {
     console.log(a + b);
     console.log(c);//undefined
@@ -141,7 +141,7 @@ const add = (a: number, b: number, c?: (number | string) ) => {
 add(5, 10);
 ```
 - Optional parameter method 2
-```
+```javascript
 const add = (a: number, b: number, c: (number | string) = 10 ) => {
     console.log(a + b);
     console.log(c);
@@ -152,14 +152,14 @@ add(5, 10);
 ### 4.3 Return type declaration
 Return type is inferred by typescript compiler. Doesn't need to explicitly declare return type.
 If you add readability, you can.
-```
+```javascript
 const add = (a: number, b: number, c?: (number | string) ): number => { ... }
 ```
 
 ### 4.4 Function signature
 Same as function declaration in C++: ```int max(int, int)```
 In typescript, the syntax looks weird to me: 
-```
+```javascript
 let max: (a: number, b:number) => number;
 ```
 Declaration is not compulsary in typescript.
@@ -169,7 +169,7 @@ Declaration is not compulsary in typescript.
 
 For reusability
 
-```
+```javascript
 type StringOrNum = string | number;
 type ObjWithName = {
     name: string,
@@ -183,7 +183,7 @@ const greet = (user: ObjWithName) => { ... }
 
 ## 6. DOM & Type Casting
 As, HTML*Element
-```
+```javascript
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
 //input
@@ -205,7 +205,7 @@ form.addEventListener('submit', (e: Event) => {
 
 
 ## 7. Classes
-```
+```javascript
 class Invoice {
     readonly client: string;
     private details: string;
@@ -263,13 +263,13 @@ Interfaces definition is good for writing standardized code. In the scenario of 
 
 ### Interface definition
 Interfaces just define how an object should look
-```
+```javascript
 interface HasFormatter {
     format():string;
 }
 ```
 ### Interface implementation
-```
+```javascript
 class Invoice implements HasFormatter {
     format() {
         return `${this.client} owes \$${this.amount} for ${this.details}.`
@@ -282,7 +282,7 @@ class Payments implements HasFormatter {
 }
 ```
 ### Using Interfaces as Types
-```
+```javascript
 let docOne:HasFormatter;
 let docTwo:HasFormatter;
 
@@ -301,7 +301,7 @@ console.log(docs);
 
 ### Usage scenario 1
 If we didn't specify the fields of the input object, compiler won't know.
-```
+```javascript
 const addUID = (obj:object)=>{
     let uid = Math.floor(Math.random()*100);
     return {...obj, uid};
@@ -310,7 +310,7 @@ let docOne = addUID({name:'diana',age:30});
 docOne.name;//error: name does not exist
 ```
 If we use generics, compiler will know the input object fields when it is passed in.
-```
+```javascript
 const addUID = <T>(obj:T)=>{
     let uid = Math.floor(Math.random()*100);
     return {...obj, uid};
@@ -321,7 +321,7 @@ docOne.name;//No errors
 
 ### Usage scenario 2
 When we have a type like below: the type of two fields are known, but data type is unknown, we may take any type of data.
-```
+```javascript
 interface Resource{
     uid: number,
     resourseName:string,
@@ -329,7 +329,7 @@ interface Resource{
 }
 ```
 We can use generics.
-```
+```javascript
 interface Resource<T>{
     uid: number,
     resourseName:string,
@@ -352,7 +352,7 @@ const docFour: Resource<string[]>={
 
 ## 11. Enums
 
-```
+```javascript
 enum ResourceType { BOOK, AUTHOR, FILM, DIRECTOR, PERSON};
 
 interface Resource<T>{
@@ -380,7 +380,7 @@ In console.log, ```ResourceType.BOOK``` is a number.
 ## 12. Tuples
 
 The type of the data in each position in a tuple is fixed once it is initialized.
-```
+```javascript
 let arr = ['string', 30,true];
 arr[0]=false;//allowed
 arr[1]='a string';//allowed
@@ -391,7 +391,7 @@ tup[0] = false;//error
 ```
 
 Now we can modify the form submit handeler to this:
-```
+```javascript
 let inputs = [toFrom.value, details.value, amount.valueAsNumber];
 
 if(type.value==='invoice'){
@@ -403,7 +403,7 @@ if(type.value==='invoice'){
 However, compiler doesn't know the type of **inputs**. It only knows ```let inputs: (string|number)[]```
 It doesn't know the type on each position.
 If we want to reuse the code, we have to use **tuple**.
-```
+```javascript
 let inputs:[string,string,number];
 inputs = [toFrom.value, details.value, amount.valueAsNumber];
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Problems when migrating from vanila JS to ReactJS"
 date:   2023-08-01 15:36:59 +1000
-categories: React
+categories: react
 ---
 
 I am migrating 50projects50days from plain HTML+CSS+JS to React. When I learnt React at the beginning, I couldn't get the hang of some hooks. But migrating projects is a very good chance to deeply understand React. 
@@ -14,7 +14,7 @@ This is the final effect. By increasing or decreasing the number input, the text
 ![Auto text effect.png](https://dianaleo.github.io/assets/images/01-08-2023/Auto-text-effect.png)
 
 Origianlly, I just copy the .js file into the first half of a function component, and copy the .html file into the second half inside return. (CSS is not included in this blog, no big changes). It looks like this:
-```
+```javascript
 function AutoTextEffect() {
     const text = "Lorem..."
     const textP = document.querySelector('#text');
@@ -54,7 +54,7 @@ function AutoTextEffect() {
 Queryselector and getElementby are not recommanded in React. DOM doesn't exist When calling this method. Page is still loading. But even if I put them under useEffect, same error still exist.
 
 #### Solution: In React way, useRef and useEffect should be used instead.
-```
+```javascript
     let myRef = useRef(null);
     ...
     <p ref={myRef}></p>
@@ -67,7 +67,7 @@ Queryselector and getElementby are not recommanded in React. DOM doesn't exist W
 But still the **Cannot read properties of null (reading 'value')** problem exists. Because the current property is not null only when DOM finishes loading. If we only access the current property within a UI eventhandler which is trigged by user interactions, then no problem.
 
 #### Solution: put the code accessing current property into useEffect
-```
+```javascript
     useEffect(() => {
         timer();
     }, []);
@@ -86,7 +86,7 @@ No error now on page loading. But the interaction is not correct. AddEventListen
 ![Use-onInput-event-instead-of-addeventlistener.png](https://dianaleo.github.io/assets/images/01-08-2023/Use-onInput-event-instead-of-addeventlistener.png)
 
 #### Solution: add eventHandler this way 
-```
+```javascript
     onInput={e => onInputHandler(e)};
     ...
     function onInputHandler(e) {
@@ -94,7 +94,7 @@ No error now on page loading. But the interaction is not correct. AddEventListen
     }
 ```
 and use State
-```
+```javascript
     const [speed, setSpeed] = useState(1);
     ...
     value={speed} //instead of value='1'
@@ -152,7 +152,7 @@ Now I connect the **speed** variable with **input** element, but the typing spee
 #### Solutions
 1. Cancel the strict mode, not recommended
 
-```
+```javascript
 root.render(
   //<React.StrictMode>
     <App />
@@ -160,7 +160,7 @@ root.render(
 );
 ```
 2. The right question isn’t “how to run an Effect once,” but “how to fix my Effect so that it works after remounting”.
-```
+```javascript
     useEffect(() => {
         timer();
         return () => {
@@ -177,7 +177,7 @@ The last problem is about using useState in setTimeout.
 When I hit the **^** button, The **speed** variable is increasing, but the actual speed is not increasing. If I print out the **speed** variable within **setTimeout** function, it is always the old value, which is 1.
 
 #### Soluiton； useRef
-```
+```javascript
     const [speed, setSpeed] = useState(1);
     let speedRef = useRef(null);
     speedRef.current = speed;
@@ -189,7 +189,7 @@ When I hit the **^** button, The **speed** variable is increasing, but the actua
 
 That's all the problems I met during migration.
 Final code here:
-```
+```javascript
 function AutoTextEffect() {
     const text = "Lorem..."
 

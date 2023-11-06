@@ -1,26 +1,37 @@
 <ul class="horizontal-list">
   {% for item in include.collection %}
 
-    <li class="card">
-      <a href="{{ item.url }}">
+  <li class="card">
+    <a href="{{ item.url }}" style="position: relative;">
+      <!-- <button class="site-btn">Site</button> -->
+      <img src="{{ item.image }}" />
+    </a>
+
+    <div class="padding">
+      <a href="{{ item.github }}">
         <span class="header">
+          <i><img src="../assets/images/github-icon.png"
+              class="img"></i>
           {{ item.title }}
 
           {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
+          <mark>{{ item.highlight }}</mark>
           {% endif %}
-
         </span>
 
-        <hr />
+        <span class="link body">
 
-        {% if item.desc != false %}
-        <p class="body">
-          {{ item.desc }}
-        </p>
-        {% endif %}
+          {% if item.desc != false %}
+          <p>
+            {{ item.desc }}
+          </p>
+          {% endif %}
+        </span>
       </a>
-    </li>
+    </div>
+
+
+  </li>
 
   {% endfor %}
 </ul>

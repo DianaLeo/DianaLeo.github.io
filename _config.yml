@@ -2,11 +2,11 @@ title: Diana Liu
 author: Diana Wenjiao Liu
 url: "" # root address of the site
 description: > # description of the site (multiple lines allowed)
-  Junior-level passionate and self-motivated full-stack web developer aiming at creating elegant solutions effectively. 
-  With 1 year experience in HTML, CSS, SASS, JavaScript, React, NodeJS, RESTful API, Git, and SQL/noSQL. 
-  Have three major projects and many practicing projects. 
-  A good learner with EE bachelor and IT master degree.  
-  An outgoing social lover with various hobbies - photography, piano, dancing, ourdoor activities, ... 
+  💎A passionate and self-motivated full-stack developer, enjoying elegant programming with cutting-edge technologies. 
+  💎Main Tech Stack: React, TypeScript, Redux, SASS, NodeJS, RESTful API, SQL Server, MongoDB, AWS, Azure and Git. 
+  💎Commercial projects experience in a small agile sprint-driven team. 
+  💎Solid computer science knowledge with IT masters degree & Telecommunications bachelor degree. 
+  💎An outgoing social lover with various hobbies - photography, piano, dancing, camping, outdoor activities and a lot more. 
 permalink: /:slug
 
 favicon: "./logo.png" # relative path to site's favicon
@@ -39,7 +39,7 @@ theme_config:
     title_projects: Projects
     title_misc_list: Details
     title_blog: Blog
-    title_old_projects: Old Projects
+    title_old_projects: Practicing Projects
 
 soopr:
   publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options

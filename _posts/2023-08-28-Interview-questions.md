@@ -67,4 +67,13 @@ mutable and immutable
 
 ## React performance improvement
 
-reduce uneccessary rerenders by using useMemo
+reduce unnecessary rerenders by using React.memo, useMemo, useCallback, createEntityAdaptor(get Ids)
+
+## Do you like to write codes with ';' or not
+
+I prefer ';', because if I write an IIFE without a ';' at the end of the last row, this IFFE will be hoisted to the end of the last row. There won't be any line breaks.
+```javascript
+(function getData(){
+fetch('/').then(res=>res.json)
+})()
+```

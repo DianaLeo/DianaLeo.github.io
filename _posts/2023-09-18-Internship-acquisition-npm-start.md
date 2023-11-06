@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Internship Acquisition] Npm Start vs Run Directly What Inside Start"
+title: "Internship Acquisition - Npm Start vs Run Directly What Inside Start"
 date:   2023-09-18 13:02:39 +1000
-categories: fullstack
+categories: backend
 ---
 
 
