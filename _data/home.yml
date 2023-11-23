@@ -18,6 +18,12 @@ project_entries:
     image: "../assets/images/projects-display/googleLocationSearch.jpg"
     desc: Syntax - Typescript+React, Logic - React hooks and customized hooks, Storage - Redux + Context, Style - CSS + customized MUI component.
 
+  - title: Sushi Chef K
+    url: https://dianaleo.github.io/Sushi_Chef_K/
+    github: https://github.com/DianaLeo/Sushi_Chef_K
+    image: "../assets/images/projects-display/sushiChefK.jpg"
+    desc: A business demonstration website (restaurant). Responsive design has been made for PCs, iPads, and mobiles. It was coding with HTML, SASS, and Vanilla JS.
+
   - title: ArtEast Studio CMS 
     url: http://ec2-13-55-238-167.ap-southeast-2.compute.amazonaws.com
     github: https://github.com/DianaLeo/SchoolCMS
@@ -29,19 +35,13 @@ project_entries:
     url: https://arteaststudio.org
     github: https://arteaststudio.org
     image: "../assets/images/projects-display/artEastDance.jpg"
-    desc: A business portal website. Tech stacks - HTML5, CSS, JavaScript, SEO.
+    desc: A business portal website. Tech stacks - HTML5, CSS, JavaScript, SEO. With responsive design for mobile screen.
 
   - title: PDF Generator
     url: https://dianaleo.github.io/PDFGenerator_TodoList/
     github: https://github.com/DianaLeo/PDFGenerator_TodoList
     image: "../assets/images/projects-display/PDFGenerator.jpg"
     desc: A React with Typescript learning project. Practiced react routing, mainly useReducer hook, localStorage, and Typescript. Except for learning section, there are two pages - PDF generator and a CRUD task board.
-
-  - title: Sushi Chef K
-    url: https://dianaleo.github.io/Sushi_Chef_K/
-    github: https://github.com/DianaLeo/Sushi_Chef_K
-    image: "../assets/images/projects-display/sushiChefK.jpg"
-    desc: A business demonstration website (restaurant). Responsive design has been made for PCs, iPads, and mobiles. It was coding with HTML, SASS, and Vanilla JS.
 
   - title: Finance Logger
     url: https://dianaleo.github.io/FinanceLogger/
