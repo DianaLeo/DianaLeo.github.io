@@ -12,19 +12,24 @@ navbar_entries:
     url: https://dianaleo.github.io/album
 
 project_entries:
-  - title: Google Location Autocomplete
+  - title: Google Location Autocomplete Demo
     url: https://dianaleo.github.io/GoogleLocationSearch/
     github: https://github.com/DianaLeo/GoogleLocationSearch
     image: "../assets/images/projects-display/googleLocationSearch.jpg"
     desc: Syntax - Typescript+React, Logic - React hooks and customized hooks, Storage - Redux + Context, Style - CSS + customized MUI component.
-    highlight: NEW
 
-  - title: School CMS
+  - title: ArtEast Studio CMS 
     url: http://ec2-13-55-238-167.ap-southeast-2.compute.amazonaws.com
     github: https://github.com/DianaLeo/SchoolCMS
     image: "../assets/images/projects-display/schoolCMS.jpg"
-    desc: A React with Typescript learning project. Practiced react routing, mainly useReducer hook, localStorage, and Typescript. Except for learning section, there are two pages - PDF generator and a CRUD task board.
+    desc: My first self-deployed fullstack project. Frontend - React with JavaScript; backend - Node; database - MongoDB; Deployment - AWS EC2 & Nginx.
     highlight: WIP
+
+  - title: ArtEast Studio Website
+    url: https://arteaststudio.org
+    github: https://arteaststudio.org
+    image: "../assets/images/projects-display/artEastDance.jpg"
+    desc: A business portal website. Tech stacks - HTML5, CSS, JavaScript, SEO.
 
   - title: PDF Generator
     url: https://dianaleo.github.io/PDFGenerator_TodoList/
@@ -38,12 +43,6 @@ project_entries:
     image: "../assets/images/projects-display/sushiChefK.jpg"
     desc: A business demonstration website (restaurant). Responsive design has been made for PCs, iPads, and mobiles. It was coding with HTML, SASS, and Vanilla JS.
 
-  - title: Todo List
-    url: http://ec2-13-55-238-167.ap-southeast-2.compute.amazonaws.com:82/
-    github: https://github.com/DianaLeo/TodoList
-    image: "../assets/images/projects-display/todoList.jpg"
-    desc: My first deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
-    
   - title: Finance Logger
     url: https://dianaleo.github.io/FinanceLogger/
     github: https://github.com/DianaLeo/FinanceLogger
@@ -53,10 +52,16 @@ project_entries:
 
 
 old_project_entries:
+  - title: Todo List
+    url: http://ec2-13-55-238-167.ap-southeast-2.compute.amazonaws.com:82/
+    github: https://github.com/DianaLeo/TodoList
+    image: "../assets/images/projects-display/todoList.jpg"
+    desc: A deployed full-stack web app. Front end(JS HTML CSS), back end (NodeJS Express), database(Mongodb) and deployed at AWS.
+    
   - title: 50Days50Projects
     url: https://dianaleo.github.io/50projects50days/
     github: https://github.com/DianaLeo/50projects50days
-    desc: These projects are different from the one in Projects section. THese are not coded with REACT. Just HTML, CSS, and JS. 
+    desc: These projects are different from the one in Projects section. These are not coded with REACT. Just HTML, CSS, and JS. 
 
   - title: 50Days50Projects-React
     url: https://dianaleo.github.io/50projects50days-react/
